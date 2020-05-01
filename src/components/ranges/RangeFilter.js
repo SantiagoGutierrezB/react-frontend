@@ -39,27 +39,17 @@ const MySlider = withStyles({
 })(Slider);
 
 const RangeFilter = ({title, tooltip, from, to, imageFrom, imageTo, step, ranges, setState}) => {    
-    // const [value, setValue] = React.useState([from, to]);
-    
-    // const changeRangeState = () => {
-    //     const newRange = {...ranges}
-    //     setState(newRange);
-    // }
     
     const handleChange = (event, newValue) => {
-        // setValue(newValue);
         setState(newValue);
-        // changeRangeState();
     };
 
     const handleMinInputChange = (event) => {
         setState([event.target.value === '' ? '' : Number(event.target.value), ranges[1]]);
-        // changeRangeState();
     };
     
     const handleMaxInputChange = (event) => {
         setState([ranges[0], event.target.value === '' ? '' : Number(event.target.value)]);
-        // changeRangeState();
     };
 
     return (

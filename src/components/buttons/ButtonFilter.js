@@ -9,7 +9,7 @@ const ButtonFilter = ({title, buttons, tooltip, setState}) => {
     const onSelect = (name) => {
         const newButtons = buttons.map((button) => {
             if(button.name === name) {
-                return {...button, selected: true}; /// ...button --> itera sobre todas las keys de un objeto
+                return {...button, selected: true}; // ...button --> itera sobre todas las keys de un objeto
             }
             return {...button, selected: false};
         });
