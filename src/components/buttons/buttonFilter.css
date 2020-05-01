@@ -1,0 +1,29 @@
+.filterContainer {
+    padding-top: 15px;
+    display: grid;
+}
+
+.btnContainer {
+    position: relative;
+    padding-top: 5px;
+}
+
+.help {
+    border: solid 1px #1724ab;
+    text-align: center;
+    background-color: #1724ab;
+    color: white;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin-left: 10px;
+}
+
+h5 {
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.header {
+    display: flex;
+}

@@ -1,0 +1,21 @@
+.btnUnselected {
+    float: left;
+    text-align: center;
+    border: solid 1px #1724ab;
+    height: 80px;
+    background-color: white;
+}
+
+.btnSelected {
+    float: left;
+    text-align: center;
+    border: solid 1px #1724ab;
+    height: 80px;
+    background-color: #daddff;
+}
+
+p {
+    margin: 0;
+    font-size: 11px;
+    padding: 0 4px;
+}

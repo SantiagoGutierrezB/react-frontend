@@ -1,0 +1,17 @@
+.mainBtn {
+    border: solid 1px #1724ab;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    width: 10rem;
+}
+
+.blue {
+    background-color: #1724ab;
+    color: white;
+}
+
+.white {
+    background-color: white;
+    color: #1724ab;
+}

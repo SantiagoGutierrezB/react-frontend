@@ -1,0 +1,25 @@
+.rangeContainer {
+    padding-top: 15px;
+    display: grid;
+}
+
+.spaceBetween {
+    padding: 0 5px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.spaceBetween img {
+    align-self: flex-end;
+}
+
+.slider {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.input {
+    border: 1px solid #1724ab;
+    padding-left: 5px;
+    width: 6rem;
+}
