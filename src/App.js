@@ -56,7 +56,7 @@ function App() {
 
   const [quilataje, setQuilataje] = useState([0, 30]);
 
-  const [precio, setPrecio] = useState([0, 5000000]);
+  const [precio, setPrecio] = useState([200, 5000000]);
 
   const quilatajePequeno = "/img/Quilataje/pequeno.png";
   const quilatajeGrande = "/img/Quilataje/grande.png";
@@ -116,7 +116,7 @@ function App() {
     setClaridades(claridadButtons);
     setCortes(corteButtons);
     setQuilataje([0, 30]);
-    setPrecio([0, 5000000]);
+    setPrecio([200, 5000000]);
   };
 
   return (

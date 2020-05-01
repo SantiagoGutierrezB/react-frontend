@@ -45,11 +45,29 @@ const RangeFilter = ({title, tooltip, from, to, imageFrom, imageTo, step, ranges
     };
 
     const handleMinInputChange = (event) => {
-        setState([event.target.value === '' ? '' : Number(event.target.value), ranges[1]]);
+        if(ranges[0] < from) {
+            console.log("You can't select something under the minimum value");
+            setState([from, ranges[1]]);
+        } else {
+            setState([event.target.value === '' ? '' : Number(event.target.value), ranges[1]]);
+        }
     };
     
     const handleMaxInputChange = (event) => {
-        setState([ranges[0], event.target.value === '' ? '' : Number(event.target.value)]);
+        if(ranges[1] > to) {
+            console.log("You can't select something above the maximum value");
+            setState([ranges[0], to]);
+        } else {
+            setState([ranges[0], event.target.value === '' ? '' : Number(event.target.value)]);
+        }
+    };
+
+    const handleBlur = () => {
+        if (ranges[0] < from) {
+          setState([from, ranges[1]]);
+        } else if (ranges[1] > to) {
+          setState([ranges[0], to]);
+        }
     };
 
     return (
@@ -86,6 +104,7 @@ const RangeFilter = ({title, tooltip, from, to, imageFrom, imageTo, step, ranges
                             value={ranges[0]}
                             margin="dense"
                             onChange={handleMinInputChange}
+                            onBlur={handleBlur}
                             inputProps={{
                                 step: `${step}`,
                                 min: `${from}`,
@@ -99,6 +118,7 @@ const RangeFilter = ({title, tooltip, from, to, imageFrom, imageTo, step, ranges
                             value={ranges[1]}
                             margin="dense"
                             onChange={handleMaxInputChange}
+                            onBlur={handleBlur}
                             inputProps={{
                                 step: `${step}`,
                                 min: `${from}`,
